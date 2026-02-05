@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+   - name: raw
+     database: vocal-oarlock-484809-r1
+     schema: gz_raw_data
+     loader: bigquery
+     description: données brutes greenweez
+     tables:
+      - name: sales
+        identifier: raw_gz_sales
+        loaded_at_field: updated_at           
+      - name: product
+        identifier: raw_gz_product
+      - name: ship
+        identifier: raw_gz_ship
